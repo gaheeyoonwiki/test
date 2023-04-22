@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create an Awesome Indie Band Name</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			margin-top: 50px;
+		}
+		input[type="text"] {
+			padding: 10px;
+			margin-top: 20px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 1px 1px 5px #ccc;
+			width: 250px;
+			font-size: 16px;
+		}
+		button {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Create an Awesome Indie Band Name</h1>
+	<input type="text" id="shirtColor" placeholder="Enter your shirt color">
+	<input type="text" id="foodName" placeholder="Enter the last food you ate">
+	<button onclick="createBandName()">Generate Name</button>
+	<p id="result"></p>
+	<script>
+		function createBandName() {
+			const shirtColor = document.getElementById("shirtColor").value;
+			const foodName = document.getElementById("foodName").value;
+			const bandName = shirtColor + " " + foodName;
+			document.getElementById("result").innerHTML = "Your indie band name is: " + bandName;
+		}
+	</script>
+</body>
+</html>
